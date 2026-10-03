@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-03T22:31:13.077887+00:00",
+  "nodeVersion": "v22.16.0",
+  "nodeChecks": {
+    "command": "node --test",
+    "exitCode": 0,
+    "tests": 4,
+    "output": "TAP version 13\n# Subtest: selection follows identity through reorder\nok 1 - selection follows identity through reorder\n  ---\n  duration_ms: 6.6176\n  type: 'test'\n  ...\n# Subtest: missing and removed IDs produce an explicit empty detail\nok 2 - missing and removed IDs produce an explicit empty detail\n  ---\n  duration_ms: 4.2772\n  type: 'test'\n  ...\n# Subtest: removal does not mutate the original fixture\nok 3 - removal does not mutate the original fixture\n  ---\n  duration_ms: 0.9531\n  type: 'test'\n  ...\n# Subtest: a detail derives updated item data rather than a stale copy\nok 4 - a detail derives updated item data rather than a stale copy\n  ---\n  duration_ms: 1.1252\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 823.8895\n"
+  },
+  "browserChecks": {
+    "id": 24,
+    "status": "passed",
+    "checks": [
+      "No document horizontal overflow at 1200, 800, 500 and 320 CSS pixels",
+      "First Tab reveals skip link; Enter focuses main",
+      "Actual React bundle: parent rerender preserves selection; removing selected item derives empty detail; reset restores fixture"
+    ],
+    "browser": "Installed Microsoft Edge via Playwright",
+    "checkedAt": "2026-10-03T22:29:00.144894+00:00",
+    "consoleErrors": []
+  },
+  "scope": "Actual local reference verification. Learner stories are not implemented. Remote CI results are separate."
+}

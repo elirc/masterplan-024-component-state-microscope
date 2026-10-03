@@ -1,0 +1,55 @@
+# Debugging laboratory
+
+[Concepts](02-CONCEPTS-AND-TRACES.md) · [Practice stories](05-PRACTICE-STORIES.md)
+
+These are deliberately proposed defects for a scratch branch. They are not claims that the shipped reference still contains these bugs. Keep main working and introduce only one change at a time.
+
+## Case 1: Removed exhibit remains in the detail
+
+**Introduce or discuss this mistake:** Store a copied selected object and never clear it after removal.
+
+**Discriminating experiment:** Select light, remove it, and inspect the detail.
+
+### Worked diagnosis
+
+First state the expected contract: The React parent stores an item list, a selected ID and an unrelated rerender counter. Detail content and item count are derived on every render. Child components receive data and callbacks through props. Removing the selected item produces an explicit empty detail without copying a stale selected object. An unrelated parent rerender preserves selection; reset restores the fixture. Data is in memory and reload resets it. Then create the smallest example from the experiment above. Compare the observed result with the contract before changing more code. The likely cause is at this boundary: **src/App.jsx: derive selected from current items and selectedId.**. Repair that boundary, rerun the example, and check one neighboring valid case so the repair does not merely special-case the chosen input.
+
+The completed reasoning record is: symptom → contract violated → input that distinguishes hypotheses → owning line or rule → minimal repair → regression evidence. This is a worked diagnostic route; fill in your actual outputs when you run it. No invented console transcript is supplied.
+
+## Case 2: Selection disappears on an unrelated rerender
+
+**Introduce or discuss this mistake:** Reinitialize selection through changing component keys or incidental setup.
+
+**Discriminating experiment:** Select light and press Rerender parent.
+
+### Your investigation
+
+1. Write two possible explanations before looking at the hints.
+2. Predict what the experiment would show if each explanation were true.
+3. Run or inspect the smallest discriminating case and record the result.
+4. Identify the owning file and make one bounded repair.
+5. Verify the original case and a neighboring case; explain why both matter.
+
+**Location hint, only after your attempt:** src/App.jsx: preserve stable component identity and stored selectedId.
+
+## Case 3: The wrong item is selected after list order changes
+
+**Introduce or discuss this mistake:** Use rendered indices as selection IDs.
+
+**Discriminating experiment:** Reverse the source list in a practice variation and select by the old index.
+
+### Your investigation
+
+1. Write two possible explanations before looking at the hints.
+2. Predict what the experiment would show if each explanation were true.
+3. Run or inspect the smallest discriminating case and record the result.
+4. Identify the owning file and make one bounded repair.
+5. Verify the original case and a neighboring case; explain why both matter.
+
+**Location hint, only after your attempt:** public/core.js and src/App.jsx: item.id is identity, not position.
+
+## If the first repair does not work
+
+Do not pile on another unrelated edit. Read the diff and check whether the observed failure changed. If the hypothesis was wrong, write that down and restore only your own experimental change before testing the next hypothesis. A rejected hypothesis is useful progress when its evidence is clear.
+
+When asking an assistant for help, provide the exact input, expected and observed result, the current diff and the file you believe owns the rule. Ask for one counterexample or diagnostic question first. Keep proposed causes separate from demonstrated causes.
