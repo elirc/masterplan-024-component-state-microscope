@@ -6,8 +6,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 01: Add a search field
 
-**User need:** As a learner or user of Component State Microscope, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Store the query in the parent and derive a visible list; decide whether filtering hides or clears the selected detail.
 
 **Implementation plan:**
@@ -26,8 +24,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 02: Choose a removal fallback
-
-**User need:** As a learner or user of Component State Microscope, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Change the missing-selection policy to select the next available exhibit, with an explicit empty-list rule.
 
@@ -48,8 +44,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 03: Add an editable exhibit title
 
-**User need:** As a learner or user of Component State Microscope, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Update one item immutably by ID and let the detail derive the new title.
 
 **Implementation plan:**
@@ -68,8 +62,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 04: Show a derived position label
-
-**User need:** As a learner or user of Component State Microscope, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Display selected position out of current item count without adding state for either number.
 
@@ -90,8 +82,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 05: Extract a reusable detail component
 
-**User need:** As a learner or user of Component State Microscope, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Move Detail into its own source file without changing its prop contract or behavior.
 
 **Implementation plan:**
@@ -110,8 +100,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 06: Add a keyboard-friendly empty action
-
-**User need:** As a learner or user of Component State Microscope, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Offer a clear route to select the first available item from the empty-detail state.
 

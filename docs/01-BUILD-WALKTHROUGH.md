@@ -20,19 +20,19 @@ Open src/main.jsx and follow App into ExhibitList and Detail in src/App.jsx. Dra
 
 Find all three useState calls and then the selected constant. items, selectedId and ticks are stored. selected and items.length are calculations. Ask what user event can change each stored value; if a value can be recomputed from those sources, explain why it does not need its own setter.
 
-**Pause and produce evidence:** Remove selected light. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Change the title of the selected record. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 3: Remove the selected object
 
 Click Moving light and remove it. selectedId still says light in the diagnostic output, but selectedItem returns null. This is a deliberate policy that exposes the missing reference rather than silently selecting another item. A learner may choose a fallback policy in an exercise after documenting the change.
 
-**Pause and produce evidence:** Change the title of the selected record. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Remove selected light. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 4: Connect core and browser evidence
 
 Node tests prove identity lookup and immutable removal for explicit arrays. The browser checks prove the actual React bundle wires buttons and props correctly. A passing core test alone cannot prove the UI called the helper with the right ID, and a screenshot alone cannot prove rerender preservation.
 
-**Pause and produce evidence:** Change the title of the selected record. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Select light then rerender parent. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Keep the implementation reviewable
 

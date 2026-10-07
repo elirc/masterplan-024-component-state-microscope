@@ -104,9 +104,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Prove selection follows identity instead of position.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Return a reversed copy of items; keep selectedId unchanged; derive detail from the reordered collection.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Return a reversed copy of items; keep selectedId unchanged; derive detail from the reordered collection. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The same exhibit remains selected after reversing.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The same exhibit remains selected after reversing. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose reverse or a documented sort. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -114,9 +114,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Distinguish no selection from a removed selection.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Choose a sentinel ID representation; add a parent handler; render a specific empty message.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Choose a sentinel ID representation; add a parent handler; render a specific empty message. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Clearing selection leaves the item list intact.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Clearing selection leaves the item list intact. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose null versus a dedicated empty string. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -124,9 +124,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Inspect events without duplicating selected objects in state.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Record IDs or event receipts in a separate bounded log; derive display labels carefully; explain missing historical items.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Record IDs or event receipts in a separate bounded log; derive display labels carefully; explain missing historical items. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The history does not become a competing current selected object.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The history does not become a competing current selected object. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose snapshot versus live-label semantics. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -134,9 +134,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Verify unrelated collection changes preserve detail.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Target a known different ID; update items immutably; keep selection identity unchanged.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Target a known different ID; update items immutably; keep selection identity unchanged. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Removing another item changes count but not selected detail.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Removing another item changes count but not selected detail. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose the interaction for selecting a removal target. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -144,9 +144,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Make the child interfaces explicit in documentation.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: List each prop and allowed shape; identify who owns callbacks; give a tiny usage example.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: List each prop and allowed shape; identify who owns callbacks; give a tiny usage example. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The contract agrees with ExhibitList and Detail source.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The contract agrees with ExhibitList and Detail source. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose whether runtime guards are useful at this scale. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -154,9 +154,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Extract a genuinely derived display.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Pass the current item count as a prop; avoid local count state; render a readable label.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Pass the current item count as a prop; avoid local count state; render a readable label. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The badge updates after removal and reset without synchronization effects.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The badge updates after removal and reset without synchronization effects. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose singular and plural wording. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -164,9 +164,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Demonstrate the rejected architecture concretely.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Store a copied selected object only in a scratch variant; rename or remove its source item; observe divergence.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Store a copied selected object only in a scratch variant; rename or remove its source item; observe divergence. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The worksheet identifies the duplicated fact and restores the ID-based design.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The worksheet identifies the duplicated fact and restores the ID-based design. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose the smallest revealing interaction. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -174,9 +174,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Separate resetting selection from restoring the whole fixture.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Offer two explicitly labeled actions; define affected state values; test each after item removal.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Offer two explicitly labeled actions; define affected state values; test each after item removal. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Selection-only reset does not silently resurrect removed items.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Selection-only reset does not silently resurrect removed items. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose a valid fallback when paper is missing. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -184,9 +184,9 @@ Look for a concrete connection to `public/core.js` or `src/App.jsx`. A strong an
 
 **First hint:** The desired improvement is “Connect user actions to resulting state.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Record action name and selected ID in a bounded UI log; keep logging outside render calculations; inspect an unrelated rerender.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Record action name and selected ID in a bounded UI log; keep logging outside render calculations; inspect an unrelated rerender. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Rerendering alone does not invent a new selection event.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Rerendering alone does not invent a new selection event. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose which events to record. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 

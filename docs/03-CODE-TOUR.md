@@ -21,7 +21,7 @@
 
 Start at [public/core.js](../public/core.js) and locate `selectedItem`. Use this trace as a map: Click an exhibit → child calls onSelect(id) → parent updates selectedId → React renders parent → selectedItem finds current object in current items → Detail receives that object and list buttons derive aria-pressed. Remove filters items; the unchanged selected ID now resolves to null.
 
-The tooling is intentionally separate from the product concept. You can study the local server or CI after the main rule is clear. Neither an HTTP preview server nor a workflow configuration should become a prerequisite for understanding an inline-block box or a small pure function.
+The tooling is intentionally separate from the product concept. You can study the local server, build step or CI after the main rule is clear. None of them should become a prerequisite for understanding a small pure function.
 
 ## Decision: Store the minimum selection identity
 
@@ -49,9 +49,9 @@ The data helpers remain ordinary JavaScript, so the core contract can be read be
 
 ## Change boundaries
 
-A small change should begin in the file that owns its meaning. Change domain rules in the core, wording and interaction in the browser adapter, and layout in the relevant CSS rule. For the static references, semantic information belongs in HTML before styling. For the Git reference, the staged snapshot boundary belongs in the helper rather than being guessed from editor state.
+A small change should begin in the file that owns its meaning. Change domain rules in the core (`public/core.js`), state, wording and interaction in the components (`src/App.jsx`), and layout in the relevant CSS rule.
 
-If a story crosses two files, say why. A new unit, weather option or UI station may require a contract, a control and tests to change together. That is a coherent feature boundary, not permission to rewrite unrelated parts of the project.
+If a story crosses two files, say why. A new option may require the core contract, a component and tests to change together. That is a coherent feature boundary, not permission to rewrite unrelated parts of the project.
 
 ## Deliberate limits
 

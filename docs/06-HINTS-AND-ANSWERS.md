@@ -6,7 +6,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 01: Add a search field
 
-**Hint 1 — ownership:** Begin from `selectedItem`. Store the query in the parent and derive a visible list; decide whether filtering hides or clears the selected detail.
+**Hint 1 — ownership:** Begin from the `useState` calls in `App`. Store the query in the parent and derive a visible list; decide whether filtering hides or clears the selected detail.
 
 **Hint 2 — reasoning:** Revisit the decision “Store the minimum selection identity”. Ask yourself: Which two stored values are enough to derive the selected title?
 
@@ -16,9 +16,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 02: Choose a removal fallback
 
-**Hint 1 — ownership:** Begin from `selectedItem`. Change the missing-selection policy to select the next available exhibit, with an explicit empty-list rule.
+**Hint 1 — ownership:** Begin from the Remove button's `onClick` in `App`. Change the missing-selection policy to select the next available exhibit, with an explicit empty-list rule.
 
-**Hint 2 — reasoning:** Revisit the decision “Keep state in the common parent”. Ask yourself: What goes wrong if every list button owns its own independent selected boolean?
+**Hint 2 — reasoning:** Revisit the decision “Store the minimum selection identity”. Ask yourself: Which two stored values are enough to derive the selected title?
 
 **Answer direction:** A defensible solution demonstrates this observable result: Removing first, last and only items yields the documented selected ID and detail. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -26,9 +26,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 03: Add an editable exhibit title
 
-**Hint 1 — ownership:** Begin from `selectedItem`. Update one item immutably by ID and let the detail derive the new title.
+**Hint 1 — ownership:** Begin from `setItems` and `selectedItem` in `App`. Update one item immutably by ID and let the detail derive the new title.
 
-**Hint 2 — reasoning:** Revisit the decision “Use React only after the plain-state exercises”. Ask yourself: Which files would you edit for selection behavior, and which generated file should you leave alone?
+**Hint 2 — reasoning:** Revisit the decision “Store the minimum selection identity”. Ask yourself: Which two stored values are enough to derive the selected title?
 
 **Answer direction:** A defensible solution demonstrates this observable result: Renaming a selected item updates both list and detail without storing a second selected object. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -36,7 +36,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 04: Show a derived position label
 
-**Hint 1 — ownership:** Begin from `selectedItem`. Display selected position out of current item count without adding state for either number.
+**Hint 1 — ownership:** Begin from the `selected` constant in `App`. Display selected position out of current item count without adding state for either number.
 
 **Hint 2 — reasoning:** Revisit the decision “Store the minimum selection identity”. Ask yourself: Which two stored values are enough to derive the selected title?
 
@@ -46,7 +46,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 05: Extract a reusable detail component
 
-**Hint 1 — ownership:** Begin from `selectedItem`. Move Detail into its own source file without changing its prop contract or behavior.
+**Hint 1 — ownership:** Begin from `Detail` in `src/App.jsx`. Move Detail into its own source file without changing its prop contract or behavior.
 
 **Hint 2 — reasoning:** Revisit the decision “Keep state in the common parent”. Ask yourself: What goes wrong if every list button owns its own independent selected boolean?
 
@@ -56,9 +56,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 06: Add a keyboard-friendly empty action
 
-**Hint 1 — ownership:** Begin from `selectedItem`. Offer a clear route to select the first available item from the empty-detail state.
+**Hint 1 — ownership:** Begin from the empty branch of `Detail` and `setSelectedId` in `App`. Offer a clear route to select the first available item from the empty-detail state.
 
-**Hint 2 — reasoning:** Revisit the decision “Use React only after the plain-state exercises”. Ask yourself: Which files would you edit for selection behavior, and which generated file should you leave alone?
+**Hint 2 — reasoning:** Revisit the decision “Keep state in the common parent”. Ask yourself: What goes wrong if every list button owns its own independent selected boolean?
 
 **Answer direction:** A defensible solution demonstrates this observable result: The action is disabled or replaced by an explanation when no items remain and selection stays ID-based. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
